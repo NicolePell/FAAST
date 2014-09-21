@@ -2,7 +2,7 @@ FAAST (Fast and Accessible Super Tube)
 =================
 
 The FAAST system allows passengers to travel from station to station. The system caters for the following:
------
+
 - [ ] The system has a number of trains in it.
 - [ ] Trains travel from station to station.
 - [ ] Passengers enter and exit train carriages inside the station.

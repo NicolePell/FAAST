@@ -16,4 +16,20 @@ class Station
 		passengers.delete(passenger)
 	end
 
+	def trains
+		@trains ||= []
+	end
+
+	def train_count
+		trains.count
+	end
+
+	def train_arrive(train)
+		trains << train
+	end
+
+	def train_leave(train)
+		trains.delete(train)
+	end
+
 end
