@@ -15,4 +15,11 @@ describe Coach do
 		expect(coach.passenger_count).to eq(1)
 	end
 
+	it "should allow passengers to alight to station" do
+		coach.board(passenger)
+		expect(coach.passenger_count).to eq(1)
+		coach.alight(passenger)
+		expect(coach.passenger_count).to eq(0)
+	end
+
 end

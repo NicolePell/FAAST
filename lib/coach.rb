@@ -12,4 +12,8 @@ class Coach
 		passengers << passenger
 	end
 
+	def alight(passenger)
+		passengers.pop
+	end
+
 end 
