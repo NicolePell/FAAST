@@ -1,10 +1,12 @@
 require 'station'
+require 'passenger'
 
 describe Station do
 
 	let(:station){ Station.new }
 	let(:passenger){ double :passenger }
 	let(:train) { double :train }
+	let(:coach) { double :coach }
 
 	it "should let passenger touch in" do
 		expect(station.passenger_count).to eq(0)
@@ -28,6 +30,10 @@ describe Station do
 		station.train_arrive(train)
 		station.train_leave(train)
 		expect(station.train_count).to eq(0)
+	end
+
+	it "should know when there are no passengers inside" do
+		expect(station.passenger_count).to eq(0)
 	end
 
 end
