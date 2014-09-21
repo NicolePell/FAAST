@@ -12,5 +12,7 @@ describe Train do
 			expect(train.coach_count).to eq(1)
 		end
 
+		
+
 
 end
