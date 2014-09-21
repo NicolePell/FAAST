@@ -2,15 +2,13 @@ class Train
 
 	attr_accessor :coach
 
-	# DEFAULT_CAPACITY = 6
+	def initialize(capacity=6)
+		@capacity = capacity
+	end
 
-	# def initialize
-
-	# end
-
-	# def train_length
-	# 	@capacity ||= DEFAULT_CAPACITY
-	# end
+	def capacity
+		@capacity
+	end
 
 	def coaches
 		@coaches ||= []
@@ -27,6 +25,11 @@ class Train
 	def remove_coach(coach)
 		coaches.pop
 	end
+
+	def transfer(tooting, moorgate)
+	
+	end
+
 
 	# def full?
 	# 	coach_count == train_length

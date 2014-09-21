@@ -36,4 +36,13 @@ describe Station do
 		expect(station.passenger_count).to eq(0)
 	end
 
+	# it "should be able to move from station to station" do
+	# 	tooting, moorgate = station, station
+	# 	tooting.train_arrive(train)
+	# 	expect(tooting.train_count).to eq(1)
+	# 	tooting.train_transfer(tooting, moorgate)
+	# 	expect(tooting.train_count).to eq(0)
+	# 	expect(moorgate.train_count).to eq(1)
+	# 	end
+
 end

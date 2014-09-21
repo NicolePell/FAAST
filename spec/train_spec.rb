@@ -18,12 +18,11 @@ describe Train do
 			expect(train.coach_count).to eq(1)
 			train.remove_coach(coach)
 			expect(train.coach_count).to eq(0)
-
 		end
 
-		# it "should have a default of 6 coaches" do
-		# 	expect(train.train_length).to eq(6)
-		# end
+		it "should have a capacity of 6 coaches" do
+			expect(train.capacity).to eq(6)
+		end
 
 		# it "should know when it is full" do
 		# 	expect(train).not_to be_full
