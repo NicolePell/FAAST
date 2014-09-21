@@ -8,4 +8,9 @@ describe Passenger do
 		expect(passenger).not_to be_in_station
 	end
 
+	it "should be able to touch into station" do
+		passenger.touch_in
+		expect(passenger).to be_in_station
+	end
+
 end
