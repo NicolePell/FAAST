@@ -1,6 +1,7 @@
 class Station
 
-	# attr_accessor :passenger
+	attr_accessor :passengers
+	attr_accessor :trains
 
 	def initalize
 		@passengers ||= []
@@ -43,9 +44,9 @@ class Station
 		trains.delete(train)
 	end
 
-	def train_transfer(station_from, station_to)
-		station_from.train_leave(self) if station_from != nil
-		station_to.train_arrive(self)
-	end
+	# def train_transfer(station_from, station_to)
+	# 	station_from.train_leave(self) if station_from != nil
+	# 	station_to.train_arrive(self)
+	# end
 
 end

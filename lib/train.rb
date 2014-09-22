@@ -1,3 +1,6 @@
+require_relative 'station'
+require_relative 'passenger'
+
 class Train
 
 	attr_accessor :coach
@@ -26,9 +29,10 @@ class Train
 		coaches.pop
 	end
 
-	def transfer(tooting, moorgate)
-	
-	end
+	# def transfer(tooting, moorgate)
+	# 	tooting.train_leave(self)
+	# 	moorgate.train_arrive(self)
+	# end
 
 
 	# def full?

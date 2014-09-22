@@ -1,12 +1,11 @@
 require 'station'
-require 'passenger'
 
 describe Station do
 
 	let(:station){ Station.new }
-	let(:passenger){ double :passenger }
+	# !bang allows same passenger to be tested throughout
+	let!(:passenger){ double :passenger }
 	let(:train) { double :train }
-	let(:coach) { double :coach }
 
 	it "should let passenger touch in" do
 		expect(station.passenger_count).to eq(0)

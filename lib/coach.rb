@@ -2,24 +2,32 @@ class Coach
 
 DEFAULT_CAPACITY = 40
 
-	def passengers
-		@passengers ||= []
+	def initialize
+		@passengers = []
 	end
 
+	# def passengers
+	# 	@passengers = []
+	# end
+
 	def passenger_count
-		passengers.count
+		@passengers.count
 	end
 
 	def capacity
-		@capacity ||= DEFAULT_CAPACITY
+		@capacity = DEFAULT_CAPACITY
 	end
 
+	# def capacity=(value)
+	# end
+
 	def board(passenger)
-		passengers << passenger
+		raise "Coach is full" if full?
+		@passengers << passenger
 	end
 
 	def alight(passenger)
-		passengers.pop
+		@passengers.delete(passenger)
 	end
 
 	def full?
