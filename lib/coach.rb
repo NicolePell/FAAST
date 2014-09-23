@@ -1,16 +1,11 @@
-# require_relative 'passenger_holder'
 require_relative 'station'
 
 class Coach
-
-	# include PassengerHolder
-	# include station
 
 DEFAULT_CAPACITY = 40
 
 	def initialize
 		@passengers = []
-
 	end
 
 	def passenger_count

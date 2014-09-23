@@ -5,7 +5,7 @@ class Passenger
 	DEFAULT_CREDIT = 10
 
 	def initialize
-
+		@travel_credit
 	end
 
 	def travel_credit 

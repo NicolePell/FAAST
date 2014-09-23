@@ -18,6 +18,7 @@ class Station
 
 	def touch_in(passenger)
 		@passengers << passenger
+		# passenger.touch_in
 		# station.in_station = true
 	end
 

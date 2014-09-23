@@ -6,7 +6,6 @@ describe Train do
 	let(:coach) { double :coach }
 	
 		it "should be able to add coaches" do
-			expect(train.coach_count).to eq(0)
 			train.add_coach(coach)
 			expect(train.coach_count).to eq(1)
 		end
@@ -21,8 +20,6 @@ describe Train do
 		it "should have a capacity of 6 coaches" do
 			expect(train.capacity).to eq(6)
 		end
-
-
  end
 
  		# it "should know when it is full" do
