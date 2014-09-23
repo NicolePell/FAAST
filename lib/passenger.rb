@@ -1,20 +1,16 @@
+require_relative 'station'
+
 class Passenger
 
-	# DEFAULT_CREDIT = 10
-	# attr_accessor :travel_credit
+	DEFAULT_CREDIT = 10
 
-	# def initialize(options = {})
-	# 	self.travel_credit = options.fetch(:travel_credit, travel_credit)
-	# 	# touch_out()
-	# end
+	def initialize
 
-	# def travel_credit 
-	# 	@travel_credit ||= DEFAULT_CREDIT
-	# end
+	end
 
-	# def travel_credit=(value)
-	# 	@travel_credit = value
-	# end
+	def travel_credit 
+		@travel_credit = DEFAULT_CREDIT
+	end
 
 	def in_station?
 		@in_station
@@ -29,9 +25,4 @@ class Passenger
 		@in_station = false
 		self
 	end
-
-	# def entry_charge
-	# 	@travel_credit -= 2
-	# end
-
 end

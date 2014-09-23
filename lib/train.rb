@@ -1,32 +1,24 @@
-require_relative 'station'
-require_relative 'passenger'
-
 class Train
-
-	attr_accessor :coach
 
 	def initialize(capacity=6)
 		@capacity = capacity
+		@coaches = []
 	end
 
 	def capacity
 		@capacity
 	end
 
-	def coaches
-		@coaches ||= []
-	end
-
 	def coach_count
-		coaches.count
+		@coaches.count
 	end
 
 	def add_coach(coach)
-		coaches << coach
+		@coaches << coach
 	end
 
 	def remove_coach(coach)
-		coaches.pop
+		@coaches.delete(coach)
 	end
 
 	# def transfer(tooting, moorgate)
