@@ -6,6 +6,7 @@ class Passenger
 
 	def initialize
 		@travel_credit
+		@station
 	end
 
 	def travel_credit 
@@ -16,13 +17,19 @@ class Passenger
 		@in_station
 	end
 
-	def touch_in
+	def touch_in(station)
 		@in_station = true
+		@station = station
 		self
 	end
 
-	def touch_out
+	# def entry_charge
+	# 	travel_credit
+	# end
+
+	def touch_out(station)
 		@in_station = false
+		@station = station
 		self
 	end
 end

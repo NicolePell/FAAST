@@ -16,14 +16,15 @@ class Station
 		passenger_count == 0
 	end
 
-	def touch_in(passenger)
+	def enter(passenger)
 		@passengers << passenger
-		# passenger.touch_in
-		# station.in_station = true
+		passenger.touch_in(self)
+		# passenger.travel_credit -=2
 	end
 
-	def touch_out(passenger)
+	def exit(passenger)
 		@passengers.delete(passenger)
+		passenger.touch_out(self)
 	end
 
 	def arrive(passenger)

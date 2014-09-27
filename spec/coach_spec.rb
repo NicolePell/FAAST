@@ -3,7 +3,7 @@ require 'coach'
 describe Coach do 
 
 	let(:coach) { Coach.new }
-	let(:passenger) { double :passenger }
+	let(:passenger) { double :passenger, touch_in: true, touch_out: false }
 	let(:station) { double :station, :release => true , :arrive => true }
 	
 	it "should have no passengers upon arrival" do
@@ -30,4 +30,3 @@ describe Coach do
 		expect{ coach.board(passenger, station) }.to raise_error(RuntimeError)
 	end
 
-end

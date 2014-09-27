@@ -20,15 +20,4 @@ class Train
 	def remove_coach(coach)
 		@coaches.delete(coach)
 	end
-
-	# def transfer(tooting, moorgate)
-	# 	tooting.train_leave(self)
-	# 	moorgate.train_arrive(self)
-	# end
-
-
-	# def full?
-	# 	coach_count == train_length
-	# end
-
 end

@@ -21,21 +21,3 @@ describe Train do
 			expect(train.capacity).to eq(6)
 		end
  end
-
- 		# it "should know when it is full" do
-		# 	expect(train).not_to be_full
-		# 	6.times { train.add_coach(coach)}
-		# 	expect(train).to be_full
-		# end
-
-		# it "should travel between stations" do
-		# 	passenger.touch_in
-		# 	expect(passenger).to be_in_station
-		# 	coach.board(passenger)
-		# 	expect(coach.passenger_count).to eq(1)
-		# 	tooting, moorgate = station, station
-		# 	train.transfer(tooting, moorgate)
-		# 	tooting.train_leave(train)
-		# 	moorgate.train_arrive(train)
-		# 	expect(tooting.train_count).to eq(0)
-		# end

@@ -20,11 +20,13 @@ DEFAULT_CAPACITY = 40
 		raise "Coach is full" if full?
 		@passengers << passenger
 		station.release(passenger)
+		passenger.touch_out(self)
 	end
 
 	def alight(passenger, station)
 		@passengers.delete(passenger)
 		station.arrive(passenger)
+		passenger.touch_in(self)
 	end
 
 	def full?

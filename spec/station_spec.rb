@@ -4,17 +4,17 @@ describe Station do
 
 	let(:station){ Station.new }
 	# !bang allows same passenger to be tested throughout
-	let!(:passenger){ double :passenger }
+	let!(:passenger){ double :passenger, touch_in: true, touch_out: false }
 	let(:train) { double :train }
 	let(:coach) { double :coach, :board => true}
 
-	it "should let passenger touch in" do
-		expect{ station.touch_in(passenger) }.to change { station.passenger_count }.by 1
+	it "should let passenger enter" do
+		expect{ station.enter(passenger) }.to change { station.passenger_count }.by 1
 	end
 	
-	it "should let passenger touch out" do
-		station.touch_in(passenger)
-		expect{ station.touch_out(passenger) }.to change { station.passenger_count }.by -1
+	it "should let passenger exit" do
+		station.enter(passenger)
+		expect{ station.exit(passenger) }.to change { station.passenger_count }.by -1
 	end
 
 	it "should allow a train to arrive at the station" do
@@ -31,7 +31,11 @@ describe Station do
 	end
 
 	it "should release passenger to train" do
-		station.touch_in(passenger)
+		station.enter(passenger)
 		expect{station.release(passenger) }.to change { station.passenger_count}.by -1
 	end
+
+	it "should charge passenger 2GBP when entering station" do
+		expect{station.enter(passenger)}.to change {passenger.travel_credit}.by -2
+	end		
 end
