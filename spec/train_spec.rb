@@ -18,6 +18,6 @@ describe Train do
 		end
 
 		it "should have a capacity of 6 coaches" do
-			expect(train.capacity).to eq(6)
+			expect(train.capacity)s.to eq(6)
 		end
  end

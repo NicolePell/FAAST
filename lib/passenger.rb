@@ -2,15 +2,17 @@ require_relative 'station'
 
 class Passenger
 
-	DEFAULT_CREDIT = 10
-
-	def initialize
-		@travel_credit
+	def initialize(travel_credit=10)
+		@travel_credit = travel_credit
 		@station
 	end
 
 	def travel_credit 
-		@travel_credit = DEFAULT_CREDIT
+		@travel_credit
+	end
+
+	def pay_travel_charge
+		@travel_credit = travel_credit - 2
 	end
 
 	def in_station?
@@ -20,12 +22,9 @@ class Passenger
 	def touch_in(station)
 		@in_station = true
 		@station = station
+		pay_travel_charge
 		self
 	end
-
-	# def entry_charge
-	# 	travel_credit
-	# end
 
 	def touch_out(station)
 		@in_station = false

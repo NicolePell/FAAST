@@ -33,9 +33,5 @@ describe Station do
 	it "should release passenger to train" do
 		station.enter(passenger)
 		expect{station.release(passenger) }.to change { station.passenger_count}.by -1
-	end
-
-	it "should charge passenger 2GBP when entering station" do
-		expect{station.enter(passenger)}.to change {passenger.travel_credit}.by -2
-	end		
+	end	
 end

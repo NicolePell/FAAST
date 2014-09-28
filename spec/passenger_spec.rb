@@ -21,9 +21,8 @@ describe Passenger do
 		expect(passenger.travel_credit).to eq(10)
 	end
 
-	# it "should charge the passenger 2GBP when touching in" do
-	# 	# allow{station.enter(passenger)}
-	# 	expect{station.enter(passenger)}.to change{passenger.travel_credit}.by -2
-	# end 
+	it "should charge the passenger 2GBP when touching in" do
+		expect{passenger.pay_travel_charge}.to change{passenger.travel_credit}.by -2
+	end 
 
 end

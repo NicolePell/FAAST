@@ -19,7 +19,6 @@ class Station
 	def enter(passenger)
 		@passengers << passenger
 		passenger.touch_in(self)
-		# passenger.travel_credit -=2
 	end
 
 	def exit(passenger)

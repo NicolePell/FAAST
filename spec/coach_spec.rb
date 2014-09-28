@@ -29,4 +29,5 @@ describe Coach do
 		40.times { coach.board(passenger, station) }
 		expect{ coach.board(passenger, station) }.to raise_error(RuntimeError)
 	end
+end
 
