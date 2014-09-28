@@ -18,3 +18,50 @@ The system contains the following object classes.
 - [x] Train
 - [x] Carriages
 
+Domain Model/CRC's
+==================
+
+Station
+-------
+Responsiblities|Collaborators
+---------------|-------------
+Allow passenger to enter station | Passenger
+Allow passenger to exit station | Train  
+Allow train to enter station | 
+Allow train to exit coach |
+Let passenger get on train |
+Let passenger get off train |
+
+Coach
+-----
+Responsiblities|Collaborators
+---------------|-------------
+Allow passenger to board coach | Passenger
+Allow passenger to get off coach | Station
+Have maximum passenger capacity | Train
+
+Passenger
+---------
+Responsiblities|Collaborators
+---------------|-------------
+Be able to touch in station | Station
+Be able to touch out of station | Coach
+Be able to board coach | 
+Be able to exit coach |
+Have travel credit |
+
+Train
+------
+Responsiblities|Collaborators
+---------------|-------------
+Be able to add coach |
+Be able to remove coach |
+Have maximum coach capacity |
+
+Programs used
+=============
+Sublime Text 3
+Command Line
+Pry
+RSpec
+Github
