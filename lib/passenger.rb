@@ -4,7 +4,7 @@ class Passenger
 
 	def initialize(travel_credit=10)
 		@travel_credit = travel_credit
-		@station
+		@station = false
 	end
 
 	def travel_credit 
