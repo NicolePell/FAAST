@@ -9,7 +9,7 @@ The FAAST system allows passengers to travel from station to station. The system
 - [x] Passengers touch in and out of the station.
 - [x] Each carriage/coach holds 40 passengers.
 - [x] Each train has a number of carriages.
-- [ ] The passengers must have more than £2 to enter the station.
+- [x] The passengers must have more than £2 to enter the station.
 
 The system contains the following object classes.
 -----
@@ -66,3 +66,9 @@ Command Line
 Pry
 RSpec
 Github
+
+Things to look at:
+=================
+[ ] Refactor
+[ ] Potentially pull out common methods to module
+[ ] Include error checks
