@@ -90,12 +90,3 @@ Responsiblities|Collaborators
 Be able to add coach |
 Be able to remove coach |
 Have maximum coach capacity |
-
-Programs and Languages used
-============================
-Ruby version 2.1.2
-Sublime Text 3
-Command Line
-Pry
-RSpec
-Github
