@@ -1,6 +1,8 @@
 FAAST (Fast and Accessible Super Tube)
 =================
 
+Develop a program for the new FAAST tube system. This is our week 1 challenge at [Makers Academy](https://www.makersacademy.com)
+
 The FAAST system allows passengers to travel from station to station. The system caters for the following:
 
 - [x] The system has a number of trains in it.
@@ -18,6 +20,37 @@ The system contains the following object classes.
 - [x] Train
 - [x] Carriages
 
+Technologies used
+=================
+- Ruby
+- Rspec
+
+How to use
+==========
+Clone the repository
+```shell
+$ git clone git@github.com:nicolepell/FAAST.git
+```
+
+Change into the directory
+```shell
+$ cd FAAST
+```
+
+Open in IRB/Pry
+```shell
+$ irb
+> require './runner'
+```
+
+To do List
+===========
+- [x] Class and test for Passenger
+- [x] Class and test for Station
+- [x] Class and test for Coach
+- [x] Class and test for Train
+
+
 Domain Model/CRC's
 ==================
 
@@ -27,7 +60,7 @@ Responsiblities|Collaborators
 ---------------|-------------
 Allow passenger to enter station | Passenger
 Allow passenger to exit station | Train  
-Allow train to enter station | 
+Allow train to enter station |
 Allow train to exit coach |
 Let passenger get on train |
 Let passenger get off train |
@@ -46,7 +79,7 @@ Responsiblities|Collaborators
 ---------------|-------------
 Be able to touch in station | Station
 Be able to touch out of station | Coach
-Be able to board coach | 
+Be able to board coach |
 Be able to exit coach |
 Have travel credit |
 
@@ -66,9 +99,3 @@ Command Line
 Pry
 RSpec
 Github
-
-Things to look at:
-=================
-[ ] Refactor
-[ ] Potentially pull out common methods to module
-[ ] Include error checks
